@@ -1,0 +1,1490 @@
+app:
+  description: ''
+  icon: rolling_on_the_floor_laughing
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: 文本分析Flow
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/openai_api_compatible:0.0.7@f20c7275bbcf055ec5d170dd5128e341986e2dcba5266d08fd080d4bdf2288f6
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/duckduckgo:0.0.4@58a551e55609297976cd64c753795ec2467524508ec1f4c22aa485b8bd4c334e
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/anthropic:0.0.9@c09fcb1d7ad3176ed9d2228799ef38c976332a4a95e34dfb2395ea39788d09c3
+kind: app
+version: 0.1.5
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 1741653890415-source-1741656665302-target
+      selected: false
+      source: '1741653890415'
+      sourceHandle: source
+      target: '1741656665302'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: iteration
+      id: 1741656665302-source-1741656863289-target
+      selected: false
+      source: '1741656665302'
+      sourceHandle: source
+      target: '1741656863289'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: iteration
+        targetType: code
+      id: 1741656863289-source-1741661842882-target
+      selected: false
+      source: '1741656863289'
+      sourceHandle: source
+      target: '1741661842882'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 1741661842882-source-1741662156812-target
+      selected: false
+      source: '1741661842882'
+      sourceHandle: source
+      target: '1741662156812'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: llm
+        targetType: code
+      id: 1741656896596-source-1741664652721-target
+      selected: false
+      source: '1741656896596'
+      sourceHandle: source
+      target: '1741664652721'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: iteration-start
+        targetType: llm
+      id: 1741656863289start-source-1741664781497-target
+      selected: false
+      source: 1741656863289start
+      sourceHandle: source
+      target: '1741664781497'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: code
+        targetType: llm
+      id: 1741664652721-source-1741670979613-target
+      selected: false
+      source: '1741664652721'
+      sourceHandle: source
+      target: '1741670979613'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: llm
+        targetType: code
+      id: 1741670979613-source-1741671068366-target
+      selected: false
+      source: '1741670979613'
+      sourceHandle: source
+      target: '1741671068366'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: code
+        targetType: llm
+      id: 1741671068366-source-1741671116586-target
+      selected: false
+      source: '1741671068366'
+      sourceHandle: source
+      target: '1741671116586'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 1741656665302-source-1741673294467-target
+      selected: false
+      source: '1741656665302'
+      sourceHandle: source
+      target: '1741673294467'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: code
+      id: 1741653627187-source-1741674219181-target
+      selected: false
+      source: '1741653627187'
+      sourceHandle: source
+      target: '1741674219181'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 1741674219181-source-1741653890415-target
+      selected: false
+      source: '1741674219181'
+      sourceHandle: source
+      target: '1741653890415'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: code
+      id: 1741674219181-source-1741674480788-target
+      source: '1741674219181'
+      sourceHandle: source
+      target: '1741674480788'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: end
+      id: 1741674480788-source-1741675266848-target
+      source: '1741674480788'
+      sourceHandle: source
+      target: '1741675266848'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: end
+      id: 1741673294467-source-1741675305793-target
+      source: '1741673294467'
+      sourceHandle: source
+      target: '1741675305793'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: iteration-start
+        targetType: code
+      id: 1741656863289start-source-1741678393147-target
+      source: 1741656863289start
+      sourceHandle: source
+      target: '1741678393147'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: code
+        targetType: tool
+      id: 1741678393147-source-1741678469649-target
+      source: '1741678393147'
+      sourceHandle: source
+      target: '1741678469649'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: tool
+        targetType: template-transform
+      id: 1741678469649-source-1741678519627-target
+      source: '1741678469649'
+      sourceHandle: source
+      target: '1741678519627'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: template-transform
+        targetType: code
+      id: 1741678519627-source-1741678584005-target
+      source: '1741678519627'
+      sourceHandle: source
+      target: '1741678584005'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: llm
+        targetType: code
+      id: 1741664781497-source-1741678584005-target
+      source: '1741664781497'
+      sourceHandle: source
+      target: '1741678584005'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: code
+        targetType: llm
+      id: 1741678584005-source-1741678651473-target
+      source: '1741678584005'
+      sourceHandle: source
+      target: '1741678651473'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: llm
+        targetType: llm
+      id: 1741678651473-source-1741656896596-target
+      source: '1741678651473'
+      sourceHandle: source
+      target: '1741656896596'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: end
+      id: 1741684059781-source-1741665413870-target
+      source: '1741684059781'
+      sourceHandle: source
+      target: '1741665413870'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 1741662156812-source-1741684059781-target
+      source: '1741662156812'
+      sourceHandle: source
+      target: '1741684059781'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: llm
+        targetType: llm
+      id: 1741678651473-source-1741755704118-target
+      source: '1741678651473'
+      sourceHandle: source
+      target: '1741755704118'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '1741656863289'
+        sourceType: llm
+        targetType: code
+      id: 1741755704118-source-1741664652721-target
+      source: '1741755704118'
+      sourceHandle: source
+      target: '1741664652721'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 开始
+        type: start
+        variables:
+        - label: 用户待分析文本
+          max_length: 10000
+          options: []
+          required: true
+          type: paragraph
+          variable: text
+        - label: 文本背景提示
+          max_length: 10000
+          options: []
+          required: true
+          type: paragraph
+          variable: hint
+      height: 115
+      id: '1741653627187'
+      position:
+        x: 363.7110492635142
+        y: 259.1648187898157
+      positionAbsolute:
+        x: 363.7110492635142
+        y: 259.1648187898157
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.1
+          mode: chat
+          name: deepseek-reasoner
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: c59f9f3d-0dcd-490a-900c-0603bcb1dad4
+          role: system
+          text: ''
+        - id: 9156ddaf-1ecf-4d23-a807-a3cbec363619
+          role: user
+          text: '从文艺理论角度给出解读这段文本的多个关键词。关键词有三到五个，输出python列表如：
+
+
+            ["keyw1", "keyw2", "keyw3", ...]
+
+
+            待解读文本：{{#1741653627187.text#}}
+
+
+            文本背景提示：'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 理论关键词
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 114
+      id: '1741653890415'
+      position:
+        x: 631.8888888888889
+        y: 367.5
+      positionAbsolute:
+        x: 631.8888888888889
+        y: 367.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main(text):\n    res = text.split(\"</details>\")[-1]\n    return\
+          \ {\"result\": eval(res)}\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: array[string]
+        selected: false
+        title: 提取关键词列表
+        type: code
+        variables:
+        - value_selector:
+          - '1741653890415'
+          - text
+          variable: text
+      height: 53
+      id: '1741656665302'
+      position:
+        x: 897.6841295183448
+        y: 367.5
+      positionAbsolute:
+        x: 897.6841295183448
+        y: 367.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        error_handle_mode: remove-abnormal-output
+        height: 928
+        is_parallel: true
+        iterator_selector:
+        - '1741656665302'
+        - result
+        output_selector:
+        - '1741671116586'
+        - text
+        output_type: array[string]
+        parallel_nums: 10
+        selected: false
+        start_node_id: 1741656863289start
+        title: 关键词深度分析
+        type: iteration
+        width: 876
+      height: 928
+      id: '1741656863289'
+      position:
+        x: 631.8888888888889
+        y: 503.5219903858299
+      positionAbsolute:
+        x: 631.8888888888889
+        y: 503.5219903858299
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 876
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1741656863289start
+      parentId: '1741656863289'
+      position:
+        x: 24
+        y: 68
+      positionAbsolute:
+        x: 655.8888888888889
+        y: 571.5219903858299
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        default_value:
+        - key: text
+          type: string
+          value: 无
+        desc: ''
+        error_strategy: default-value
+        isInIteration: true
+        iteration_id: '1741656863289'
+        model:
+          completion_params:
+            temperature: 0.1
+          mode: chat
+          name: deepseek-reasoner
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 58dea451-7b76-4b98-b402-b090ee418dcb
+          role: system
+          text: ''
+        - id: 4b1f8384-1b6a-4cb3-b5ef-3fe8962e0cfa
+          role: user
+          text: '请根据文本内容以及其分析关键词，给出对文本的分析。注意，关键词背景仅供参考，你的分析必须扎实基础，选取合适的理论进行分析，不要为套用而套用，或者进行无端的想象。
+
+
+            文本内容：{{#1741653627187.text#}}
+
+
+            文本背景：{{#1741674219181.txthint#}}
+
+
+            关键词：“{{#1741656863289.item#}}”
+
+
+            关键词背景：{{#1741678651473.text#}}'
+        retry_config:
+          max_retries: '3'
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 关键词思考-DSR1
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 150
+      id: '1741656896596'
+      parentId: '1741656863289'
+      position:
+        x: 333.82293867270425
+        y: 355.42362863794426
+      positionAbsolute:
+        x: 965.7118275615932
+        y: 858.9456190237742
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    - data:
+        code: "\ndef main(results) -> dict:\n    return {\n        \"txt\": str(results)\n\
+          \    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          txt:
+            children: null
+            type: string
+        selected: false
+        title: 合成思考
+        type: code
+        variables:
+        - value_selector:
+          - '1741656863289'
+          - output
+          variable: results
+      height: 53
+      id: '1741661842882'
+      position:
+        x: 1520.9234054873205
+        y: 503.5219903858299
+      positionAbsolute:
+        x: 1520.9234054873205
+        y: 503.5219903858299
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.05
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 8fdcda47-3a72-43e1-8b7a-7b615cf97015
+          role: system
+          text: ''
+        - id: 68406116-fa4b-4a95-ba34-d94067f8f96b
+          role: user
+          text: '以下是关于一段文本的文艺分析与批判，请深入整合这份分析，给出完整详细的最终文本文艺解读。
+
+
+            文本：{{#1741653627187.text#}}
+
+
+            分析：{{#1741661842882.txt#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 解读-批判平铺
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1741662156812'
+      position:
+        x: 1520.9234054873205
+        y: 574.6325049081179
+      positionAbsolute:
+        x: 1520.9234054873205
+        y: 574.6325049081179
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main(text1, text2):\n    text1 = text1.split(\"</details>\")[-1]\n\
+          \    text2 = text2.split(\"</think>\")[-1]\n    res = f\"\"\"\n    思考1：{text1}\n\
+          \    思考2：{text2}\n    \"\"\"\n    return {\"result\": res}\n"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: '1741656863289'
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 提取思考结论
+        type: code
+        variables:
+        - value_selector:
+          - '1741656896596'
+          - text
+          variable: text1
+        - value_selector:
+          - '1741755704118'
+          - text
+          variable: text2
+      height: 53
+      id: '1741664652721'
+      parentId: '1741656863289'
+      position:
+        x: 607.7874187419177
+        y: 354.4202269947566
+      positionAbsolute:
+        x: 1239.6763076308066
+        y: 857.9422173805865
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        isInIteration: true
+        iteration_id: '1741656863289'
+        model:
+          completion_params:
+            temperature: 0.07
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: a5955052-b297-4eab-aef7-d2f48bc5a313
+          role: system
+          text: ''
+        - id: 5e0d1aa7-22b4-4a8b-b531-9c52e5336600
+          role: user
+          text: 在文艺理论中，“{{#1741656863289.item#}}”是一个很重要的关键词，请给出简短精炼的、可供参考的相关背景知识与理论
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 关键词背景
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 114
+      id: '1741664781497'
+      parentId: '1741656863289'
+      position:
+        x: 82.23332573067967
+        y: 65
+      positionAbsolute:
+        x: 714.1222146195686
+        y: 568.5219903858299
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1741684059781'
+          - text
+          variable: 文艺分析思路
+        selected: false
+        title: 总结分析结果
+        type: end
+      height: 89
+      id: '1741665413870'
+      position:
+        x: 1813.5593934718454
+        y: 488.52994451477844
+      positionAbsolute:
+        x: 1813.5593934718454
+        y: 488.52994451477844
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        isInIteration: true
+        iteration_id: '1741656863289'
+        model:
+          completion_params:
+            temperature: 0.1
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 67e300cb-253a-4e36-8aea-d6907b9040b8
+          role: system
+          text: ''
+        - id: a250e223-5e32-414a-bf9c-20e6c46c1491
+          role: user
+          text: '请根据文本内容以及其分析，对其分析进行合理批评。注意，你的批评必须扎实基础，仔细思考现有分析是否贴合文本，对其不合理之处提出批评与修改。
+
+
+            关键词：“{{#1741656863289.item#}}”
+
+
+            文本内容：{{#1741653627187.text#}}
+
+
+            现有分析：{{#1741664652721.result#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 关键词批判
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1741670979613'
+      parentId: '1741656863289'
+      position:
+        x: 333.4009655910611
+        y: 674.5938667029711
+      positionAbsolute:
+        x: 965.28985447995
+        y: 1178.115857088801
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    - data:
+        code: "\ndef main(text):\n    res = text.split(\"</details>\")[-1]\n    return\
+          \ {\"result\": res}\n"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: '1741656863289'
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 提取批判结论
+        type: code
+        variables:
+        - value_selector:
+          - '1741670979613'
+          - text
+          variable: text
+      height: 53
+      id: '1741671068366'
+      parentId: '1741656863289'
+      position:
+        x: 596.2961513064088
+        y: 674.0104703175894
+      positionAbsolute:
+        x: 1228.1850401952977
+        y: 1177.5324607034192
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        isInIteration: true
+        iteration_id: '1741656863289'
+        model:
+          completion_params:
+            temperature: 0.1
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 2a07967e-b30c-410e-b07b-faa111ab6b20
+          role: system
+          text: ''
+        - role: user
+          text: '以下是关于一段文本的分析总结与批判，请融合两者优点和缺陷，给出完整详细的最终文本分析。
+
+
+            文本：{{#1741653627187.text#}}
+
+
+            分析：{{#1741664652721.result#}}
+
+
+            批判：{{#1741671068366.result#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 总结关键词思考与批判
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1741671116586'
+      parentId: '1741656863289'
+      position:
+        x: 597.1607919304715
+        y: 794
+      positionAbsolute:
+        x: 1229.0496808193604
+        y: 1297.52199038583
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.1
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 5f64e389-e004-4600-8622-788b167c9f08
+          role: system
+          text: ''
+        - role: user
+          text: '在对文本的文艺理论分析中，需要着重分析一些关键词。请分析，这些关键词能为阐释文本给出什么视角。
+
+
+            关键词：{{#1741653890415.text#}}
+
+
+            文本：{{#1741653627187.text#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 关键词溯源思考
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 114
+      id: '1741673294467'
+      position:
+        x: 1177.4339085544602
+        y: 367.5
+      positionAbsolute:
+        x: 1177.4339085544602
+        y: 367.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main(hint) -> dict:\n    return {\n        \"txthint\": hint\
+          \ if hint != \"\" else \"无\",\n    }\n"
+        code_language: python3
+        default_value:
+        - key: txthint
+          type: string
+          value: 无
+        desc: ''
+        error_strategy: default-value
+        outputs:
+          txthint:
+            children: null
+            type: string
+        selected: false
+        title: 背景提示处理
+        type: code
+        variables:
+        - value_selector:
+          - '1741653627187'
+          - hint
+          variable: hint
+      height: 89
+      id: '1741674219181'
+      position:
+        x: 631.8888888888889
+        y: 259.1648187898157
+      positionAbsolute:
+        x: 631.8888888888889
+        y: 259.1648187898157
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main(txt: str, txthint: str) -> dict:\n    return {\n       \
+          \ \"result\": f\"待分析文本：\\n\\n{txt}\\n\\n背景提示：\\n\\n{txthint}\"\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 背景信息呈现
+        type: code
+        variables:
+        - value_selector:
+          - '1741653627187'
+          - text
+          variable: txt
+        - value_selector:
+          - '1741674219181'
+          - txthint
+          variable: txthint
+      height: 53
+      id: '1741674480788'
+      position:
+        x: 897.6841295183448
+        y: 259.1648187898157
+      positionAbsolute:
+        x: 897.6841295183448
+        y: 259.1648187898157
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1741674480788'
+          - result
+          variable: 背景信息
+        selected: false
+        title: 背景信息呈现结果
+        type: end
+      height: 89
+      id: '1741675266848'
+      position:
+        x: 1681.8435618904655
+        y: 259.1648187898157
+      positionAbsolute:
+        x: 1681.8435618904655
+        y: 259.1648187898157
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1741673294467'
+          - text
+          variable: 关键词溯源
+        selected: false
+        title: 关键词溯源思考结果
+        type: end
+      height: 89
+      id: '1741675305793'
+      position:
+        x: 1748.2369078908357
+        y: 367.5
+      positionAbsolute:
+        x: 1748.2369078908357
+        y: 367.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main(item: str) -> dict:\n    return {\n        \"result\": f\"\
+          文学理论 {item}\",\n    }\n"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: '1741656863289'
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 生成搜索
+        type: code
+        variables:
+        - value_selector:
+          - '1741656863289'
+          - item
+          variable: item
+      height: 53
+      id: '1741678393147'
+      parentId: '1741656863289'
+      position:
+        x: 82.23332573067967
+        y: 204.07881454830942
+      positionAbsolute:
+        x: 714.1222146195686
+        y: 707.6008049341393
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    - data:
+        default_value:
+        - key: text
+          type: string
+          value: ''
+        - key: json
+          type: array[object]
+          value: '[]'
+        desc: ''
+        error_strategy: default-value
+        isInIteration: true
+        is_team_authorization: true
+        iteration_id: '1741656863289'
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: The search query.
+            ja_JP: The search query.
+            pt_BR: The search query.
+            zh_Hans: 搜索查询语句。
+          label:
+            en_US: Query string
+            ja_JP: Query string
+            pt_BR: Query string
+            zh_Hans: 查询语句
+          llm_description: Key words for searching
+          max: null
+          min: null
+          name: query
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: 5
+          form: form
+          human_description:
+            en_US: The maximum number of results to return.
+            ja_JP: The maximum number of results to return.
+            pt_BR: The maximum number of results to return.
+            zh_Hans: 最大结果数量
+          label:
+            en_US: Max results
+            ja_JP: Max results
+            pt_BR: Max results
+            zh_Hans: 最大结果数量
+          llm_description: ''
+          max: null
+          min: null
+          name: max_results
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: 0
+          form: form
+          human_description:
+            en_US: Whether to pass the search results to llm for summarization.
+            ja_JP: Whether to pass the search results to llm for summarization.
+            pt_BR: Whether to pass the search results to llm for summarization.
+            zh_Hans: 是否需要将搜索结果传给大模型总结
+          label:
+            en_US: Require Summary
+            ja_JP: Require Summary
+            pt_BR: Require Summary
+            zh_Hans: 是否总结
+          llm_description: ''
+          max: null
+          min: null
+          name: require_summary
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: boolean
+        params:
+          max_results: ''
+          query: ''
+          require_summary: ''
+        provider_id: langgenius/duckduckgo/duckduckgo
+        provider_name: langgenius/duckduckgo/duckduckgo
+        provider_type: builtin
+        retry_config:
+          max_retries: 10
+          retry_enabled: true
+          retry_interval: 5000
+        selected: false
+        title: DuckDuckGo 搜索
+        tool_configurations:
+          max_results: 8
+          require_summary: 0
+        tool_label: DuckDuckGo 搜索
+        tool_name: ddgo_search
+        tool_parameters:
+          query:
+            type: mixed
+            value: '{{#1741678393147.result#}}'
+        type: tool
+      height: 176
+      id: '1741678469649'
+      parentId: '1741656863289'
+      position:
+        x: 80.03810621284788
+        y: 266.1887188712366
+      positionAbsolute:
+        x: 711.9269951017368
+        y: 769.7107092570665
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    - data:
+        desc: ''
+        isInIteration: true
+        iteration_id: '1741656863289'
+        selected: false
+        template: '{{ searchjson }}'
+        title: 模板转换
+        type: template-transform
+        variables:
+        - value_selector:
+          - '1741678469649'
+          - json
+          variable: searchjson
+      height: 53
+      id: '1741678519627'
+      parentId: '1741656863289'
+      position:
+        x: 341.27454985777626
+        y: 200.866233290227
+      positionAbsolute:
+        x: 973.1634387466652
+        y: 704.3882236760569
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    - data:
+        code: "\ndef main(arg1: str, arg2: str) -> dict:\n    return {\n        \"\
+          back\": arg1 + \"\\n\\n\" + arg2,\n    }\n"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: '1741656863289'
+        outputs:
+          back:
+            children: null
+            type: string
+        selected: false
+        title: 合并背景
+        type: code
+        variables:
+        - value_selector:
+          - '1741664781497'
+          - text
+          variable: arg1
+        - value_selector:
+          - '1741678519627'
+          - output
+          variable: arg2
+      height: 53
+      id: '1741678584005'
+      parentId: '1741656863289'
+      position:
+        x: 606.7944351801477
+        y: 65
+      positionAbsolute:
+        x: 1238.6833240690366
+        y: 568.5219903858299
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        isInIteration: true
+        iteration_id: '1741656863289'
+        model:
+          completion_params:
+            temperature: 0.1
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 850eaeee-0ebc-4cdc-9c8c-878d5d1fe0b6
+          role: system
+          text: ''
+        - id: 778f95ee-f358-4ade-ab11-80ade3ed533c
+          role: user
+          text: '根据搜索结果，用精简概括的语言给出文艺分析理论中关键词”{{#1741656863289.item#}}“的相关背景与理论。
+
+
+            搜索结果：{{#1741678584005.back#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 总结关键词背景
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 114
+      id: '1741678651473'
+      parentId: '1741656863289'
+      position:
+        x: 609.9535177591199
+        y: 144.24367103270015
+      positionAbsolute:
+        x: 1241.8424066480088
+        y: 647.76566141853
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.08
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 8e5e3e58-0e2b-4363-9e1f-2a47c2ffa93a
+          role: system
+          text: ''
+        - id: f71c620a-47f2-45fe-8a4a-8335a15170d4
+          role: user
+          text: '以下是关于一段文本的文艺分析与批判，请吸收批判精华，从正面重新构建这份分析，最终给出完整详细的最终文本文艺解读。
+
+
+            文本：{{#1741653627187.text#}}
+
+
+            文本背景：{{#1741674219181.txthint#}}
+
+
+            分析关键视角：{{#1741656665302.result#}}
+
+
+            分析：{{#1741662156812.text#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 观点重构
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1741684059781'
+      position:
+        x: 1520.9234054873205
+        y: 708.7509831372246
+      positionAbsolute:
+        x: 1520.9234054873205
+        y: 708.7509831372246
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        default_value:
+        - key: text
+          type: string
+          value: 无
+        desc: ''
+        error_strategy: default-value
+        isInIteration: true
+        iteration_id: '1741656863289'
+        model:
+          completion_params:
+            max_tokens: 3072
+            thinking: true
+            thinking_budget: 1024
+          mode: chat
+          name: claude-3-7-sonnet-20250219
+          provider: langgenius/anthropic/anthropic
+        prompt_template:
+        - id: 8a300492-76ea-4689-aa6f-541a9c52c091
+          role: system
+          text: 你是一个文学评论家
+        - id: 9e7cabad-a9ce-4567-ae9f-e4bbc6f13bc1
+          role: user
+          text: '请根据文本内容以及其分析关键词，给出对文本的分析。注意，关键词背景仅供参考，你的分析必须扎实基础，选取合适的理论进行分析。
+
+
+            文本内容：{{#1741653627187.text#}}
+
+
+            文本背景：{{#1741674219181.txthint#}}
+
+
+            关键词：“{{#1741656863289.item#}}”
+
+
+            关键词背景：{{#1741678651473.text#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: 关键词思考-Claude
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 150
+      id: '1741755704118'
+      parentId: '1741656863289'
+      position:
+        x: 331.9970002897055
+        y: 513.2785102558989
+      positionAbsolute:
+        x: 963.8858891785944
+        y: 1016.8005006417288
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+      zIndex: 1002
+    viewport:
+      x: -314.549494559873
+      y: -155.19162042898256
+      zoom: 0.8333333333333343
